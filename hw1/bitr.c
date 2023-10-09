@@ -35,13 +35,17 @@ uint32_t reverseBits(uint32_t x)
 
 int main()
 {
-    uint32_t x1 = 0b01001100000000000000000000000000;
-    uint32_t x2 = 0b01001000000000000000000000000000;
-    uint32_t x3 = 0b00000000000000100000000000000001;
-    uint32_t x4 = 0b10000000000000000000000000000010;
-    printf("reverseBits(%u) = %x\n", x1, reverseBits(x1));
-    printf("reverseBits(%u) = %x\n", x2, reverseBits(x2));
-    printf("reverseBits(%u) = %x\n", x3, reverseBits(x3));
-    printf("reverseBits(%u) = %x\n", x4, reverseBits(x4));
+    uint32_t x1 = 0x4c000000;
+    uint32_t x2 = 0x0000ffff;
+    uint32_t x3 = 0x20001;
+    uint32_t x4 = 0x80000002;
+    uint32_t x5 = 0x0000ff00;
+    uint32_t x6 = 0x0fc00000;
+    printf("reverseBits(%x) = %d\n", x1, reverseBits(x1));
+    printf("reverseBits(%x) = %d\n", x2, reverseBits(x2));
+    printf("reverseBits(%x) = %d\n", x3, reverseBits(x3));
+    printf("reverseBits(%x) = %d\n", x4, reverseBits(x4));
+    printf("reverseBits(%x) = %d\n", x5, reverseBits(x5));
+    printf("reverseBits(%x) = %d\n", x6, reverseBits(x6));
     return 0;
 }
